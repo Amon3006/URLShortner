@@ -23,7 +23,7 @@ namespace UrlShortener.Api
             {
                 options.AddPolicy("React", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173")
+                    policy.WithOrigins("http://localhost:5173","https://url-shortner-ten-omega.vercel.app")
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
