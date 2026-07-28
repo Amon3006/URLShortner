@@ -31,7 +31,15 @@ namespace UrlShortener.Api
 
             // Configure MongoDB settings
 
-            builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+            builder.Services.Configure<MongoDbSettings>(
+     options =>
+     {
+         options.ConnectionString =
+             Environment.GetEnvironmentVariable("MONGODB_URI");
+
+         options.DatabaseName =
+             Environment.GetEnvironmentVariable("DATABASE_NAME");
+     });
             builder.Services.AddSingleton<MongoDbContext>();
             builder.Services.AddScoped<IUrlRepository, UrlRepository>();
 
