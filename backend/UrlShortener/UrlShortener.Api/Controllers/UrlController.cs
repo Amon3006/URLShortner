@@ -39,7 +39,7 @@ namespace UrlShortener.Api.Controllers
                 Id = url.Id ?? string.Empty,
                 OriginalUrl = url.OriginalUrl,
                 ShortCode = url.ShortCode,
-                ShortUrl = $"https://localhost:5001/{url.ShortCode}",
+                ShortUrl = $"https://urlshortner-1-y3mm.onrender.com/{url.ShortCode}",
                 ClickCount = url.ClickCount
             };
 
@@ -56,7 +56,7 @@ namespace UrlShortener.Api.Controllers
                 Id = url.Id ?? string.Empty,
                 OriginalUrl = url.OriginalUrl,
                 ShortCode = url.ShortCode,
-                ShortUrl = $"https://localhost:7114/{url.ShortCode}",
+                ShortUrl = $"https://urlshortner-1-y3mm.onrender.com/{url.ShortCode}",
                 ClickCount = url.ClickCount
             };
 
