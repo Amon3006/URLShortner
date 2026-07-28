@@ -1,0 +1,16 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Docker
+**/bin/
+**/obj/
